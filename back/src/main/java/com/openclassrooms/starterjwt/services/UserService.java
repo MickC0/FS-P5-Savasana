@@ -8,8 +8,10 @@ import com.openclassrooms.starterjwt.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.beans.Transient;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -23,6 +25,10 @@ public class UserService {
 
     @Transactional
     public void delete(Long id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isEmpty()) {
+            throw new EntityNotFoundException("User not found");
+        }
         List<Session> sessions = sessionRepository.findAll();
         for (Session session : sessions) {
             session.getUsers().removeIf(u -> u.getId().equals(id));
