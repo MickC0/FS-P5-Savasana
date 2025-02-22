@@ -1,4 +1,4 @@
-package com.openclassrooms.starterjwt.unit;
+package com.openclassrooms.starterjwt.unit.service;
 
 import com.openclassrooms.starterjwt.exception.BadRequestException;
 import com.openclassrooms.starterjwt.exception.NotFoundException;
