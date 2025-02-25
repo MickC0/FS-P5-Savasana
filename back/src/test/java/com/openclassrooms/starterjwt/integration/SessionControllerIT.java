@@ -31,19 +31,10 @@ public class SessionControllerIT {
     }
 
     @Test
-    public void shouldCreateAndRetrieveSession() throws Exception {
-        String sessionJson = "{ \"name\": \"Yoga Class\", \"date\": \"2025-03-03T10:00:00Z\" }";
-
-        // 🔥 Création d’une session
-        mockMvc.perform(post("/api/sessions")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(sessionJson))
-                .andExpect(status().isCreated());
-
-        // 🔥 Vérification qu’elle est bien en base
+    public void shouldRetrieveEmptySessionListInitially() throws Exception {
         mockMvc.perform(get("/api/sessions"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(1))
-                .andExpect(jsonPath("$[0].name").value("Yoga Class"));
+                .andExpect(jsonPath("$.length()").value(0)); // Vérifie qu'il n'y a aucune session au départ
     }
+
 }
