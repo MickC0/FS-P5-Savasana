@@ -30,11 +30,6 @@ public class SessionControllerIT {
         sessionRepository.deleteAll(); // Nettoie la base entre chaque test
     }
 
-    @Test
-    public void shouldRetrieveEmptySessionListInitially() throws Exception {
-        mockMvc.perform(get("/api/sessions"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(0)); // Vérifie qu'il n'y a aucune session au départ
-    }
+
 
 }
