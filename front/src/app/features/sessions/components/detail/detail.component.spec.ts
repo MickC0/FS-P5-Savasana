@@ -11,6 +11,7 @@ import {TeacherService} from "../../../../services/teacher.service";
 import {Session} from "../../interfaces/session.interface";
 import {Teacher} from "../../../../interfaces/teacher.interface";
 import {of} from "rxjs";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 
 describe('DetailComponent', () => {
@@ -60,7 +61,8 @@ describe('DetailComponent', () => {
         { provide: MatSnackBar, useValue: snackBarMock },
         { provide: Router, useValue: routerMock },
         { provide: SessionService, useValue: sessionServiceMock }
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
 
     fixture = TestBed.createComponent(DetailComponent);
