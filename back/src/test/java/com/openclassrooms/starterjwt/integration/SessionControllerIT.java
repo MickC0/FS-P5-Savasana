@@ -95,9 +95,10 @@ public class SessionControllerIT {
     @Test
     void testFindAll_ShouldReturnListOfSessions() throws Exception {
         mockMvc.perform(get("/api/session")
-                        .header("Authorization", token))
+                        .header("Authorization", authenticateAndGetToken()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()").isNumber());
+
     }
 
     @Test
