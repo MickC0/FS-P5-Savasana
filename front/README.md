@@ -21,52 +21,30 @@ Launch Front-end:
 > npm run start;
 
 
-## Ressources
+## ✅ Tests Front-end
 
-### Mockoon env 
+📁 Folder : `/YogaApp/front`
 
-### Postman collection
+### Unit and integration Tests (Jest)
 
-For Postman import the collection
+```bash
+npm run test
+```
 
-> ressources/postman/yoga.postman_collection.json 
+🧪 Report in : `/coverage/jest/lcov-report/index.html`
 
-by following the documentation: 
+📸 ![Jest Coverage Report](ressources/coverage-report/Frontend_tests-unitaires-integration.png)
 
-https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman
+---
 
+### Tests end-to-end (Cypress)
 
-### MySQL
+```bash
+npm run e2e:ci
+```
 
-SQL script for creating the schema is available `ressources/sql/script.sql`
+📄 Rapport : `/coverage/lcov-report/index.html`
 
-By default the admin account is:
-- login: yoga@studio.com
-- password: test!1234
+📸 ![Cypress Coverage Report](ressources/coverage-report/Frontend_tests-e2e.png)
 
-
-### Test
-
-#### E2E
-
-Launching e2e test:
-
-> npm run e2e
-
-Generate coverage report (you should launch e2e test before):
-
-> npm run e2e:coverage
-
-Report is available here:
-
-> front/coverage/lcov-report/index.html
-
-#### Unitary test
-
-Launching test:
-
-> npm run test
-
-for following change:
-
-> npm run test:watch
+---

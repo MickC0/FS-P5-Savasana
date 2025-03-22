@@ -1,6 +1,3 @@
-# Yoga App !
-
-
 
 # 🧘 Yoga App
 
@@ -8,7 +5,12 @@ A complete web application — from backend to frontend — to manage yoga class
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Technologies utilisées
+
+### Front-end
+![Angular](https://img.shields.io/badge/Angular-14.2.0-blue)  
+![Jest](https://img.shields.io/badge/Jest-28.1.3-green)  
+![Cypress](https://img.shields.io/badge/Cypress-10.4.0-purple)
 
 ### Back-end
 ![Java](https://img.shields.io/badge/Java-17.0.8-orange)  
@@ -63,6 +65,52 @@ mvn package
 java -jar target/yoga-app-0.0.1-SNAPSHOT.jar
 ```
 
+---
+
+### 4. Start Front-end
+
+```bash
+cd YogaApp/front
+npm install
+npm run start
+```
+
+Access the application : [http://localhost:4200](http://localhost:4200)
+
+🔐 Default Admin identifiers :
+- **login** : `yoga@studio.com`
+- **password** : `test!1234`
+
+---
+
+## ✅ Tests Front-end
+
+📁 Folder : `/YogaApp/front`
+
+### Unit and integration Tests (Jest)
+
+```bash
+npm run test
+```
+
+🧪 Report in : `/coverage/jest/lcov-report/index.html`
+
+📸 ![Jest Coverage Report](ressources/coverage-report/Frontend_tests-unitaires-integration.png)
+
+---
+
+### Tests end-to-end (Cypress)
+
+```bash
+npm run e2e:ci
+```
+
+📄 Rapport : `/coverage/lcov-report/index.html`
+
+📸 ![Cypress Coverage Report](ressources/coverage-report/Frontend_tests-e2e.png)
+
+---
+
 ## ✅ Tests Back-end
 
 📁 Folder : `/YogaApp/back`
@@ -88,14 +136,16 @@ mvn clean verify
 
 ### Postman
 
-Postman collection :  
-`/YogaApp/ressources/postman/yoga.postman_collection.json`
+For Postman import the collection
 
-👉 [Import in Postman](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-and-exporting-overview/)
+> ressources/postman/yoga.postman_collection.json
+
+by following the documentation:
+
+https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman
 
 ---
 
 ## 📎 Contributors
 
 Me
-
