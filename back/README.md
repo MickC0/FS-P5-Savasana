@@ -75,12 +75,12 @@ mvn clean verify
 
 📄 Unit tests report JaCoCo : `/target/site/jacoco-ut-coverage-report/index.html`
 
-📸 ![JUnit Coverage Report](ressources/coverage-report/Backend_tests-unitaires.png)
+📸 ![JUnit Coverage Report](../ressources/coverage-report/Backend_tests-unitaires.png)
 
 
 📄 Integration tests report JaCoCo : `/target/site/jacoco-it-coverage-report/index.html`
 
-📸 ![JUnit Coverage Report](ressources/coverage-report/Backend_tests-integration.png)
+📸 ![JUnit Coverage Report](../ressources/coverage-report/Backend_tests-integration.png)
 
 ---
 
